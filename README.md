@@ -1,4 +1,4 @@
 # codsoft
 This Is My First Git Repository
-<br><hr>
-Autor: Santosh Hadiya
+<br>
+<b>Autor</b>- Santosh Hadiya
