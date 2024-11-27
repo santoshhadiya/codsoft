@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out;
+}
+header:hover {
+  background: rgba(0, 0, 0, 1);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00d4ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1920x1080') no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1.5s ease-in-out;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #00d4ff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Features Section */
+.features {
+  padding: 3rem 0;
+  text-align: center;
+  background: #f8f9fa;
+}
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.features h2::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #00d4ff;
+  display: block;
+  margin: 0.5rem auto;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.feature-box {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.8);
+}
+.feature-box h3 {
+  font-size: 1.8rem;
+  color: #00d4ff;
+  margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.testimonial-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial-box p {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.testimonial-box h4 {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+footer p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+footer p:hover {
+  color: #00d4ff;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="logo">MyBrand</h1>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to MyBrand</h2>
+      <p>Your go-to solution for amazing products and services.</p>
+      <a href="#features" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Our Features</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h3>Feature 1</h3>
+          <p>Discover our amazing feature that makes your life easier.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Feature 2</h3>
+          <p>Innovative solutions designed with you in mind.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Feature 3</h3>
+          <p>Experience quality and efficiency like never before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-box">
+        <p>"MyBrand changed my life! The service is excellent."</p>
+        <h4>- John Doe</h4>
+      </div>
+      <div class="testimonial-box">
+        <p>"I've never experienced such amazing features before!"</p>
+        <h4>- Jane Smith</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 MyBrand. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
